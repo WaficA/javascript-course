@@ -1,4 +1,5 @@
 "strict";
+
 /*LECTURE: Functions
 1. Write a function called 'describeCountry' which takes three parameters: 
 'country', 'population' and 'capitalCity'. Based on this input, the 
