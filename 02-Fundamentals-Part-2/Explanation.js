@@ -141,3 +141,12 @@ console.log(friends2.includes("Natasha"));
 if (friends2.includes("Natasha")) {
   console.log("you have a friend called Natasha");
 }
+
+//introduction to objects
+const jonass = {
+  firstName: "jonas",
+  lastName: "schmedtmann",
+  age5: 2037 - 1991,
+  job: "teacher",
+  friends3: ["peter", "marry", "paul"],
+};
