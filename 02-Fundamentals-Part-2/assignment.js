@@ -147,7 +147,6 @@ const myCountry1 = {
   population: 6,
   neighbours: ["italy", "rome", "belguim"],
 };
-
 /*LECTURE: Dot vs. Bracket Notation
 1. Using the object from the previous assignment, log a string like this to the 
 console: 'Finland has 6 million finnish-speaking people, 3 neighbouring countries 
@@ -156,7 +155,7 @@ and a capital called Helsinki.'
 decrease it by two million using brackets notation. */
 
 console.log(
-  `${myCountry1.country} has ${myCountry1.population} million ${myCountry1.language}-speaking people, ${myCountry1.neighbours.length} neighbouring countries and a capital called ${myCountry1.Capital}}`
+  `${myCountry1.country} has ${myCountry1.population} million ${myCountry1.language}-speaking people, ${myCountry1.neighbours.length} neighbouring countries and a capital called ${myCountry1.Capital}`
 );
 
 myCountry1.population = 8;
@@ -174,3 +173,22 @@ assignment, but this time using the 'this' keyword.
 method will set a new property on the object, called 'isIsland'. 
 'isIsland' will be true if there are no neighbouring countries, and false if 
 there are. Use the ternary operator to set the property */
+
+const myCountry2 = {
+  country: "usa",
+  Capital: "washington",
+  language: "english",
+  population: 6,
+  neighbours: ["mexico", "canada", "alienCountry"],
+
+  descibe: function () {
+    console.log(
+      `${this.country} has ${this.population} million prople, they are ${this.language}-speaking people, with ${this.neighbours.length} neighbouring countries and a capital called ${this.Capital}`
+    );
+  },
+  checkIsland: function () {
+    this.isIsland = this.neighbours.length === 0 ? true : false;
+    return this.isIsland;
+  },
+};
+myCountry2.descibe();
