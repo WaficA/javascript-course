@@ -150,3 +150,59 @@ const jonass = {
   job: "teacher",
   friends3: ["peter", "marry", "paul"],
 };
+
+// dot vs bracket notation
+
+console.log(jonass.firstName);
+console.log(jonass["firstName"]);
+
+const num = "5";
+console.log(jonass["age" + num]);
+
+const interested = prompt(
+  "what are you intrested in knowing? choose between firstName, lastName, age5, job, and friends3"
+);
+
+if (jonass[interested]) {
+  console.log(jonass[interested]);
+} else {
+  console.log("undifined entry!!");
+}
+
+jonass.location = "city";
+jonass["website"] = "jonas.com";
+console.log(jonass);
+
+//"jonas has 3 friends, and his best friend is called micheal"
+console.log(
+  `${jonas.firstName} has ${jonass.friends3.length} friends, and his best friend is called ${jonass.friends3[0]} `
+);
+
+const eva = {
+  firstName: "eva",
+  lastName: "jones",
+  birthYear: 1991,
+  job: "nurse",
+  friends3: ["amber", "marry", "paul"],
+  hasDriverLiscene: false,
+
+  //calcAge: function{
+  //return 2037 - this.birthYear}
+
+  calcAge50: function () {
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge50()}-years old ${
+      eva.job
+    }, and she has ${this.hasDriverLiscene ? "a" : "no"} drivers license`;
+  },
+};
+
+console.log(eva.calcAge50());
+console.log(eva.age);
+
+//"eva is a 46-years old teacher, and she has a  drivers license"
+
+console.log(eva.getSummary());
