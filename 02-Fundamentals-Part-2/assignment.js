@@ -93,7 +93,7 @@ function percentageOfWorldA(populationA) {
   return (populationA / 7900) * 100;
 }
 
-const populationA = [10, 50, 23, 1441];
+let populationA = [10, 50, 23, 1441];
 console.log(populationA.length);
 console.log(populationA.length === 4);
 
@@ -192,3 +192,49 @@ const myCountry2 = {
   },
 };
 myCountry2.descibe();
+
+/*LECTURE: Iteration: The for Loop
+1. There are elections in your country! In a small town, there are only 50 voters. 
+Use a for loop to simulate the 50 people voting, by logging a string like this to 
+the console (for numbers 1 to 50): 'Voter number 1 is currently voting' */
+
+for (let elect = 1; elect <= 50; elect++) {
+  console.log(`voter number ${elect} is curently voting`);
+}
+
+/*LECTURE: Looping Arrays, Breaking and Continuing
+1. Let's bring back the 'populations' array from a previous assignment
+2. Use a for loop to compute an array called 'percentages2' containing the 
+percentages of the world population for the 4 population values. Use the 
+function 'percentageOfWorld1' that you created earlier
+3. Confirm that 'percentages2' contains exactly the same values as the 
+'percentages' array that we created manually in the previous assignment, 
+and reflect on how much better this solution is */
+
+populationA = [10, 50, 23, 1441];
+const percentageNew = [];
+
+for (let i = 0; i <= populationA.length; i++) {
+  const perc = percentageOfWorldA(populationA[i]);
+  percentageNew.push(perc);
+}
+console.log(percentageNew);
+
+/*LECTURE: Looping Backwards and Loops in Loops
+1. Store this array of arrays into a variable called 'listOfNeighbours'
+[['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 
+'Russia']];
+2. Log only the neighbouring countries to the console, one by one, not the entire 
+arrays. Log a string like 'Neighbour: Canada' for each country
+3. You will need a loop inside a loop for this. This is actually a bit tricky, so don't 
+worry if it's too difficult for you! But you can still try to figure this out anyway � */
+
+const listOfNeighbours = [
+  ["canada", "mexico"],
+  ["spain"],
+  ["norway", "sweden", "russia"],
+];
+
+for (let i = 0; i < listOfNeighbours.length; i++)
+  for (let rep = 0; rep < listOfNeighbours[i].length; rep++)
+    console.log(`neigbour: ${listOfNeighbours[i][rep]}`);

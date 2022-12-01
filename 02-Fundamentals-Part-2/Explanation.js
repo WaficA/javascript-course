@@ -75,10 +75,10 @@ function NewFruitProcessor(apples, oranges) {
 console.log(NewFruitProcessor(2, 3));
 
 //arrays
-/*
+
 const newFriends = new Array("thomas", "victor", "tria"); // another way (just for info)
 console.log(newFriends);
-console.log(typeof newFriends); */
+console.log(typeof newFriends);
 
 const friends = ["micheal", "steven", "peter"]; // use this
 console.log(friends);
@@ -206,3 +206,72 @@ console.log(eva.age);
 //"eva is a 46-years old teacher, and she has a  drivers license"
 
 console.log(eva.getSummary());
+
+//for loop keeps running while condition is TRUE
+// for (counter;condition;counter update){}
+
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`repeat ${rep} times`);
+}
+
+const figo = [
+  "figo",
+  "tuckman",
+  2037 - 1991,
+  "tacher",
+  ["peter", "jonas", "teresa"],
+];
+
+const types = [];
+
+for (let i = 0; i < figo.length; i++) {
+  console.log(figo[i], typeof figo[i]);
+
+  //filling types array
+  //types[i] = typeof figo[i];
+  types.push(typeof figo[i]);
+}
+console.log(types);
+
+const yearss = [1991, 1992, 1993, 1994, 1995];
+const age = [];
+
+for (let i = 0; i < yearss.length; i++) {
+  age.push(2037 - yearss[i]);
+}
+console.log(age);
+
+for (let i = 0; i < yearss.length; i++) {
+  age.push(2037 - yearss[i]);
+}
+console.log(age);
+
+console.log("-----only strings-----");
+for (let i = 0; i < figo.length; i++) {
+  if (typeof figo[i] !== "string") continue;
+
+  console.log(figo[i]);
+}
+
+for (let i = 0; i < figo.length; i++) {
+  if (typeof figo[i] === "number") break;
+
+  console.log(figo[i]);
+}
+
+//looping backwards
+
+for (let i = figo.length - 1; i >= 0; i--) {
+  console.log(figo[i], i);
+}
+
+//loop inside loop
+
+for (let exercise = 1; exercise <= 4; exercise++) {
+  console.log(`start exercise ${exercise}`);
+  for (let rep = 1; rep <= 6; rep++) {
+    console.log(`lift weight ${exercise}: lifting weight repitation ${rep}`);
+  }
+}
+
+//while loop
