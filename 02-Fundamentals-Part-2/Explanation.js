@@ -159,15 +159,15 @@ console.log(jonass["firstName"]);
 const num = "5";
 console.log(jonass["age" + num]);
 
-const interested = prompt(
-  "what are you intrested in knowing? choose between firstName, lastName, age5, job, and friends3"
-);
+//const interested = prompt(
+//  "what are you intrested in knowing? choose between firstName, lastName, age5, job, and friends3"
+//);
 
-if (jonass[interested]) {
-  console.log(jonass[interested]);
-} else {
-  console.log("undifined entry!!");
-}
+//if (jonass[interested]) {
+//  console.log(jonass[interested]);
+//} else {
+//  console.log("undifined entry!!");
+//}
 
 jonass.location = "city";
 jonass["website"] = "jonas.com";

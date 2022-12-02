@@ -245,11 +245,11 @@ but this time using a while loop (call the array 'percentages3')
 2. Reflect on what solution you like better for this task: the for loop or the while
 loop? */
 
-populationA = [10, 50, 23, 1441];
+const populationB = [90, 50, 23, 1441];
 const percentages3 = [];
 let i = 0;
 
-while (i < populationA.length) {
+while (i < populationB.length) {
   const perr = percentageOfWorldA(populationA[i]);
   percentages3.push(perr);
   i++;
