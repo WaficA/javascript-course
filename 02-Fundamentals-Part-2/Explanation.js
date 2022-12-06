@@ -1,4 +1,4 @@
-"strict";
+"use strict";
 
 function logger() {
   console.log("call this funtion");

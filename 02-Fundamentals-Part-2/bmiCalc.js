@@ -1,4 +1,4 @@
-"strict";
+"use strict";
 /*Coding Challenge #3
 Let's go back to Mark and John comparing their BMIs! This time, let's use objects to 
 implement the calculations! Remember: BMI = mass / height ** 2 = mass 
