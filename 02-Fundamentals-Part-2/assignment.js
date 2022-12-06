@@ -255,3 +255,7 @@ while (i < populationB.length) {
   i++;
 }
 console.log(percentages3);
+
+
+
+
